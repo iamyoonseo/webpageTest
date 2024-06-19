@@ -1,0 +1,30 @@
+<!-- 1. DOM 요소를 얻어오기 위해 HTML의 요소에서 id 속성 사용한 코드-->
+<html>
+    <head></head>
+    <body>
+        <input type = 'button' id = 'btnclk' value = '버튼'>
+        <script>
+            btnclk.onclick = function(){
+                alert('버튼 클릭');
+            }
+        </script>
+    </body>
+</html>
+
+<!-- 1-2. 하나의 이벤트에 여러 개의 이벤트 처리를 할 수 없는 문제점 해결-->
+<html>
+    <head></head>
+    <body>
+        <input type = 'button' id = 'btnclk' value = '버튼' onclick = first()>
+        <script>
+            function first(){
+                alert('첫 번째 메세지');
+            }
+            btnclk.onclick = function(){
+                alert('두 번째 메세지');
+            }
+        </script>
+    </body>
+</html>
+
+<!-- 2. addEventListner -->
